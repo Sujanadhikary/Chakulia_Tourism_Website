@@ -3,7 +3,7 @@
 Welcome to the **Chakulia City Tourism Website**, your gateway to the captivating world of Chakulia! Discover the rich cultural heritage, natural beauty, and exciting attractions of this enchanting city through an engaging online platform.
 
 ## About
-This website is meticulously crafted using the user-friendly **WYSIWYG Web Builder** software, ensuring an intuitive and visually appealing experience for every visitor. Our goal is to promote tourism in Chakulia and provide an array of features that allow users to explore the city's unique charm.
+This website is ensuring an intuitive and visually appealing experience for every visitor. Our goal is to promote tourism in Chakulia and provide an array of features that allow users to explore the city's unique charm.
 
 ## Features
 - **Stunning Photo Galleries:** Immerse yourself in picturesque landscapes and breathtaking views that showcase the beauty of Chakulia.
