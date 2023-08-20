@@ -1,0 +1,527 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Home</title>
+<meta name="generator" content="WYSIWYG Web Builder 18 - http://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/owl.carousel.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/delft.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="owl.carousel.min.js"></script>
+<script src="skrollr.min.js"></script>
+<script src="popper.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="wb.photocollage.min.js"></script>
+<script src="wb.overlay.min.js"></script>
+<script src="wwb18.min.js"></script>
+<script>   
+   document.addEventListener('DOMContentLoaded', function(event)
+   {
+      var elementattractionsCarousel = document.querySelector('#attractionsCarousel');
+      elementattractionsCarousel.addEventListener('slid.bs.carousel', function(e)
+      {
+         switch(e.to)
+         {
+            case 0:
+               $('#Carousel2').bootstrapcarousel(0);
+               break;
+            case 1:
+               $('#Carousel2').bootstrapcarousel(1);
+               break;
+            case 2:
+               $('#Carousel2').bootstrapcarousel(2);
+               break;
+            case 3:
+               $('#Carousel2').bootstrapcarousel(3);
+               break;
+         }
+      });
+      var attractionsCarousel = new bootstrap.Carousel('#attractionsCarousel', {interval: 3000, pause: false});
+   });
+</script>
+<script>   
+   $(document).ready(function()
+   {
+      $('#reviewsImage1').addClass('visibility-hidden');
+      $('#portfolio-image2').addClass('visibility-hidden');
+      $("a[href*='#header']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#planTripLayoutGrid']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#planTripLayoutGrid').offset().top }, 600, 'easeInSine');
+      });
+      $("a[href*='#todoCards']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_todoCards').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#galleryLayoutGrid']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_galleryLayoutGrid').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      function onScrollgalleryLayoutGrid()
+      {
+         var $obj = $("#wb_galleryLayoutGrid");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+            AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+         }
+      }
+      onScrollgalleryLayoutGrid();
+      $(window).scroll(function(event)
+      {
+         onScrollgalleryLayoutGrid();
+      });
+      $("#reviewsContainer").owlCarousel({autoplayTimeout:5000, margin: 16, autoplay: false, nav: false, loop: true, dots: true, responsive: {0: {items: 1},480: {items: 1}, slideBy: 1}});
+      $("a[href*='#contactForm']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contactForm').offset().top }, 600, 'easeInSine');
+      });
+      function skrollrInit()
+      {
+         skrollr.init({forceHeight: false, mobileCheck: function() { return false; }, smoothScrolling: false});
+      }
+      skrollrInit();
+      $("#galleryCollage").photocollage({ effect: 'css', duration: 600, padding: 20, lazyload: true, matrix: '4,0,0,0,2,0,1,0,0,0,0,0,0,1,0,0,0,0,1,2,0,0,0,0,0,1,0,0,2,0,2,0,1,1,1,0,0,0,0,2,0,1,1,1,1,1,0,0,1' });
+      $('#OverlayMenu1-overlay').overlay({popup:true, hideTransition:true});
+      $('#OverlayMenu1').on('click', function(e)
+      {
+         $.overlay.toggle($('#OverlayMenu1-overlay'));
+         return false;
+      });
+   });
+</script>
+</head>
+<body>
+   <div id="wb_planTrip">
+      <div id="planTrip">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_OverlayMenu1">
+                  <a href="#" id="OverlayMenu1">
+                     <span class="line"></span>
+                     <span class="line">
+                     </span><span class="line"></span>
+                  </a>
+               </div>
+            </div>
+            <div class="col-2">
+               <div id="wb_planTripHeading">
+                  <h1 id="planTripHeading">CHAKULIA THE GROWING CITY</h1>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_welcome">
+      <div id="welcome-overlay"></div>
+      <div id="welcome">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_attractionsCarousel">
+                  <div id="attractionsCarousel" class="carousel slide" data-bs-ride="carousel">
+                     <ol class="carousel-indicators">
+                        <li data-bs-target="#attractionsCarousel" data-bs-slide-to="0" class="active"></li>
+                        <li data-bs-target="#attractionsCarousel" data-bs-slide-to="1"></li>
+                        <li data-bs-target="#attractionsCarousel" data-bs-slide-to="2"></li>
+                        <li data-bs-target="#attractionsCarousel" data-bs-slide-to="3"></li>
+                     </ol>
+                     <div class="carousel-inner">
+                        <div class="carousel-item frame-1 active">
+                           <div class="carousel-item-inner">
+                              <div id="wb_attractionsText2" class="caption">
+                                 <p style="font-size:16px;line-height:18px;"><span style="font-size:21px;line-height:24.5px;font-weight:bold;">CHAKULIA</span><br/><span style="font-size:15px;line-height:16.5px;">NAGARPANCHAYAT</span></p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item frame-2">
+                           <div class="carousel-item-inner">
+                              <div id="wb_attractionsText3" class="caption">
+                                 <p style="font-size:16px;line-height:18px;font-weight:bold;"><span style="font-size:21px;line-height:24.5px;">AREAL VIEW</span></p>
+                                 <p style="font-size:16px;line-height:18px;"><span style="font-size:15px;line-height:16.5px;">CHAKULIA RAILWAY STATION</span></p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item frame-3">
+                           <div class="carousel-item-inner">
+                              <div id="wb_Text1" class="caption">
+                                 <p style="font-size:16px;line-height:18px;font-weight:bold;"><span style="font-size:21px;line-height:24.5px;">AIRPORT</span></p>
+                                 <p style="font-size:15px;line-height:16.5px;">&nbsp;</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item frame-4">
+                           <div class="carousel-item-inner">
+                              <div id="wb_Text2" class="caption">
+                                 <p style="font-size:16px;line-height:18px;font-weight:bold;"><span style="font-size:21px;line-height:24.5px;">BIRSA MUNDA PARK</span></p>
+                                 <p style="font-size:16px;line-height:18px;">&nbsp;</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div id="wb_attractionsText1">
+                  <p style="font-size:15px;line-height:16.5px;">Chakulia, known as Chakuliya, is a vibrant Notified Area Council (NAC) and the esteemed 4th Municipal Corporation within the picturesque Ghatshila subdivision of East Singhbhum district in the beautiful state of Jharkhand, India. With its charming allure, it lies just 71 km away from the bustling city of Jamshedpur, serving as a unique blend of tradition and modernity, where the warmth of the community welcomes you to explore its rich heritage and promising future.</p>
+               </div>
+               <a id="attractionsButton" href="https://en.wikipedia.org/wiki/Chakulia">More details</a>
+               <div id="wb_Image1">
+                  <img src="images/Screenshot 2023-08-13 140150.jpg" id="Image1" alt="" width="455" height="241">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_header">
+      <div id="header">
+         <div class="row">
+            <div class="col-1">
+               <nav id="wb_CssMenu2">
+                  <ul id="CssMenu2" role="menubar" class="nav">
+                     <li role="menuitem" class="nav-item firstmain"><a class="nav-link CssMenu2-effect" href="./news.html" target="_self">NEWS</a>
+                     </li>
+                     <li role="menuitem" class="nav-item"><a class="nav-link CssMenu2-effect" href="./services.html" target="_self">SERVICES</a>
+                     </li>
+                     <li role="menuitem" class="nav-item"><a class="nav-link CssMenu2-effect" href="./facilities.html" target="_self">FACILITIES</a>
+                     </li>
+                     <li role="menuitem" class="nav-item"><a class="nav-link CssMenu2-effect" href="./admin.html" target="_self">ADMIN</a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_LayoutGrid1">
+      <div id="LayoutGrid1">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Heading1">
+                  <h2 id="Heading1">Tourist Places</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_planTripLayoutGrid">
+      <div id="planTripLayoutGrid">
+         <div id="wb_planTripCard1" class="card">
+            <div id="planTripCard1-card-body">
+               <div id="planTripCard1-card-item0"><i class="fa fa-plane"></i></div>
+               <div id="planTripCard1-card-item1">Airport</div>
+               <div id="planTripCard1-card-item2">Chakulia Airport is an airport in India. Currently, the airport is non operational. In 2006, it was reported that the airport has been non-operational since it served during World War II.</div>
+            </div>
+         </div>
+         <div id="wb_planTripCard3" class="card">
+            <div id="planTripCard3-card-body">
+               <div id="planTripCard3-card-item0"><i class="fa fa-tree"></i></div>
+               <div id="planTripCard3-card-item1">Parks</div>
+               <div id="planTripCard3-card-item2">Chakulia boasts a collection of five parks, with one among them standing as Jharkhand's most expansive ecological park, an impressive undertaking that entailed a significant investment of 15 crore rupees for its construction.</div>
+            </div>
+         </div>
+         <div id="wb_planTripCard2" class="card">
+            <div id="planTripCard2-card-body">
+               <div id="planTripCard2-card-item0"><i class="fa fa-smile-o"></i></div>
+               <div id="planTripCard2-card-item1">Kanaishwar Hill</div>
+               <div id="planTripCard2-card-item2">Chakulia features a captivating hilltop attraction that becomes truly enchanting during the monsoon season when a special worship ceremony is held. It's a must-visit destination for those seeking a unique and spiritual experience amid the natural beauty of the area.</div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_banner">
+      <div id="banner-overlay"></div>
+      <div id="banner">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_bannerHeading1">
+                  <h2 id="bannerHeading1">Do you wnat to be featured on this website?</h2>
+               </div>
+               <a id="bannerButton" href="./admin.html">Contact Me</a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_LayoutGrid2">
+      <div id="LayoutGrid2">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Heading2">
+                  <h2 id="Heading2">Chakulia Is Known For</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_todoCards">
+      <div id="todoCards">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_todoCard1" class="card" data--250-bottom="transform: scale(1.0,1.0);" data-333-bottom="transform: scale(0.5,0.5);">
+                     <div id="todoCard1-card-body">
+                        <div id="todoCard1-card-item0"><i class="fa fa-home"></i></div>
+                        <div id="todoCard1-card-item1">Hindusthan Soap Factory</div>
+                        <div id="todoCard1-card-item2">In 1990, the entrepreneur began producing toilet soap. South East Chemicals is a leading detergent powder manufacturer in Jharkhand.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_todoCard2" class="card" data--250-bottom="transform: scale(1.0,1.0);" data-333-bottom="transform: scale(0.5,0.5);">
+                     <div id="todoCard2-card-body">
+                        <div id="todoCard2-card-item0"><i class="fa fa-heart"></i></div>
+                        <div id="todoCard2-card-item1">Gousala</div>
+                        <div id="todoCard2-card-item2">Chakulia Gousala: A sanctuary for thousands of cows, offering care, nourishment, and promoting cow conservation, fostering a strong bond between humans and these animals.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+                  <div id="wb_todoCard3" class="card" data--250-bottom="transform: scale(1.0,1.0);" data-333-bottom="transform: scale(0.5,0.5);">
+                     <div id="todoCard3-card-body">
+                        <div id="todoCard3-card-item0"><i class="fa fa-paper-plane"></i></div>
+                        <div id="todoCard3-card-item1">Airport</div>
+                        <div id="todoCard3-card-item2">Chakulia boasts a non-operational airport, a relic from World War 2, echoing its historical significance. Once bustling, it now stands as a silent witness to a bygone era of aviation.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-4">
+               <div class="col-4-padding">
+                  <div id="wb_todoCard4" class="card" data--250-bottom="transform: scale(1.0,1.0);" data-333-bottom="transform: scale(0.5,0.5);">
+                     <div id="todoCard4-card-body">
+                        <div id="todoCard4-card-item0"><i class="fa fa-tree"></i></div>
+                        <div id="todoCard4-card-item1">Wild Life</div>
+                        <div id="todoCard4-card-item2">Chakulia forest range hosts thousands of magnificent elephants, a captivating testament to the beauty of untamed nature.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_gallery">
+      <div id="gallery">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_galleryHeading">
+                  <h2 id="galleryHeading">Gallery</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_galleryLayoutGrid">
+      <div id="galleryLayoutGrid">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_galleryCollage">
+                     <div id="galleryCollage">
+                        <div class="thumbnails">
+                           <figure class="thumbnail">
+                              <a href="images/Screenshot 2023-08-12 185434.jpg"><img alt="" src="images/Screenshot 2023-08-12 185434.jpg" loading="lazy" class="image" width="273" height="154"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/Chakulia_sunset.jpg"><img alt="" src="images/Chakulia_sunset.jpg" loading="lazy" class="image" width="273" height="152"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/Chakulia_airport.jpg"><img alt="" src="images/Chakulia_airport.jpg" loading="lazy" class="image" width="273" height="153"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/2022-05-23.jpg"><img alt="" src="images/2022-05-23.jpg" loading="lazy" class="image" width="273" height="205"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/20221224_135541_562.jpg"><img alt="" src="images/20221224_135541_562.jpg" loading="lazy" class="image" width="273" height="205"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/2023-06-19.jpg"><img alt="" src="images/2023-06-19.jpg" loading="lazy" class="image" width="273" height="206"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/2021-05-13 (1).jpg"><img alt="" src="images/2021-05-13 (1).jpg" loading="lazy" class="image" width="273" height="365"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/IMG_20180514_001434.jpg"><img alt="" src="images/IMG_20180514_001434.jpg" loading="lazy" class="image" width="273" height="205"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/2017-01-25.jpg"><img alt="" src="images/2017-01-25.jpg" loading="lazy" class="image" width="273" height="205"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/2017-03-31.jpg"><img alt="" src="images/2017-03-31.jpg" loading="lazy" class="image" width="273" height="205"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/2017-10-09.jpg"><img alt="" src="images/2017-10-09.jpg" loading="lazy" class="image" width="273" height="154"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/2021-12-19.jpg"><img alt="" src="images/2021-12-19.jpg" loading="lazy" class="image" width="273" height="154"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/rte (2).jpg"><img alt="" src="images/rte (2).jpg" loading="lazy" class="image" width="273" height="205"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/2022-10-16.jpg"><img alt="" src="images/2022-10-16.jpg" loading="lazy" class="image" width="273" height="205"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/2021-05-13.jpg"><img alt="" src="images/2021-05-13.jpg" loading="lazy" class="image" width="273" height="204"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/IMG-20221008-WA0053.jpg"><img alt="" src="images/IMG-20221008-WA0053.jpg" loading="lazy" class="image" width="273" height="205"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/2023-04-03.jpg"><img alt="" src="images/2023-04-03.jpg" loading="lazy" class="image" width="273" height="205"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/2018-10-30.jpg"><img alt="" src="images/2018-10-30.jpg" loading="lazy" class="image" width="273" height="269"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/2017-08-09.jpg"><img alt="" src="images/2017-08-09.jpg" loading="lazy" class="image" width="273" height="205"></a>
+                           </figure>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_reviews">
+      <div id="reviews">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_reviewsHeading">
+                  <h2 id="reviewsHeading">Famous Parsonalities</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_reviewsContainer">
+      <div id="reviewsContainer" class="owl-carousel owl-theme">
+         <div id="wb_reviewsCard1" class="card">
+            <div id="reviewsCard1-card-body">
+               <a href="https://www.facebook.com/chakuliacity/"><img id="reviewsCard1-card-item0" src="images/photo_2023-08-13_13-54-30.jpg" width="500" height="500" alt="" title=""></a>
+               <div id="reviewsCard1-card-item1">Chakulia The Growing City</div>
+               <div id="reviewsCard1-card-item2">Facebook Page</div>
+               <div id="reviewsCard1-card-item3"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard1-card-item4"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard1-card-item5"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard1-card-item6"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard1-card-item7"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard1-card-item8">Discover the stories of Chakulia's transformation, from its roots to the blooming opportunities that make it a promising hub for the future.</div>
+            </div>
+         </div>
+         <div id="wb_reviewsCard2" class="card">
+            <div id="reviewsCard2-card-body">
+               <img id="reviewsCard2-card-item0" src="images/2023-05-31.jpg" width="4080" height="2296" alt="" title="">
+               <div id="reviewsCard2-card-item1">Birsa Munda Park</div>
+               <div id="reviewsCard2-card-item2">Park</div>
+               <div id="reviewsCard2-card-item3"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard2-card-item4"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard2-card-item5"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard2-card-item6"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard2-card-item7"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard2-card-item8">Birsa Munda Park in Chakulia: A serene oasis where nature and leisure unite, offering a refreshing escape for all. Come, experience the tranquility.</div>
+            </div>
+         </div>
+         <div id="wb_Card1" class="card">
+            <div id="Card1-card-body">
+               <img id="Card1-card-item0" src="images/Screenshot 2022-06-18 180613.png" width="594" height="496" alt="" title="">
+               <div id="Card1-card-item1">Chakulia Railway Station</div>
+               <div id="Card1-card-item2">Station</div>
+               <div id="Card1-card-item3"><i class="fa fa-star"></i></div>
+               <div id="Card1-card-item4"><i class="fa fa-star"></i></div>
+               <div id="Card1-card-item5"><i class="fa fa-star"></i></div>
+               <div id="Card1-card-item6"><i class="fa fa-star"></i></div>
+               <div id="Card1-card-item7"><i class="fa fa-star"></i></div>
+               <div id="Card1-card-item8">Chakulia Railway Station: A gateway to our vibrant town, connecting you to the heart of our community. Step off the train and into our welcoming embrace.</div>
+            </div>
+         </div>
+         <div id="wb_reviewsCard4" class="card">
+            <div id="reviewsCard4-card-body">
+               <img id="reviewsCard4-card-item0" src="images/2017-10-09.jpg" width="4160" height="2340" alt="" title="">
+               <div id="reviewsCard4-card-item1">Naaga Baba Mandir</div>
+               <div id="reviewsCard4-card-item2">Temple</div>
+               <div id="reviewsCard4-card-item3"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard4-card-item4"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard4-card-item5"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard4-card-item6"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard4-card-item7"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard4-card-item8">Naga Baba Temple: A sacred haven where spirituality and tranquility converge, inviting all seekers to find solace in its serene ambiance. Discover the blessings of this revered place.</div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contact">
+      <div id="contact">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_contactHeading">
+                  <h2 id="contactHeading">Contact me for any inquiries or to get in touch.</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contactForm">
+      <div id="contactForm-divider-top">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 20" preserveAspectRatio="none">
+            <path class="divider-fill" d="M500,20 L490,0 h20 L500,20 Z"/>
+         </svg></div>
+      <div id="contactForm">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Text4">
+                  <p><span style="font-weight:bold;">Contact Me</span></p>
+                  <p style="font-size:13px;line-height:16px;">&nbsp;</p>
+                  <p style="font-size:13px;line-height:16px;"><span style="font-size:21px;line-height:24.5px;font-weight:bold;">Sujan Adhikary</span></p>
+                  <p style="font-size:13px;line-height:16px;">93,Namopara.</p>
+                  <p style="font-size:13px;line-height:16px;">Chakulia.</p>
+                  <p style="font-size:13px;line-height:16px;">East Singhbhum</p>
+                  <p style="font-size:13px;line-height:16px;">Jharkhand-832301</p>
+                  <p style="font-size:13px;line-height:16px;">Email- sujanadhikary.ece@gmail.com</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="StickyLayer" data-250-start="opacity:1;" data-start="opacity:0;">
+      <div id="wb_up-arrow">
+         <a href="#welcome"><div id="up-arrow"><i class="fa fa-angle-up"></i></div></a></div>
+   </div>
+   <div id="wb_footer">
+      <div id="footer">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Text3">
+                  <p style="font-size:12px;line-height:13.5px;">Copyright © 2023 Sujan Adhikary</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="OverlayMenu1-overlay">
+      <div class="OverlayMenu1">
+         <ul class="drilldown-menu" role="menu">
+            <li><a role="menuitem" href="./index.html" class="OverlayMenu1-effect"><i class="fa fa-home overlay-icon"></i>Home</a></li>
+            <li><a role="menuitem" href="./admin.html" class="OverlayMenu1-effect"><i class="fa fa-user overlay-icon"></i>Admin</a></li>
+         </ul>
+      </div>
+   </div>
+</body>
+</html>

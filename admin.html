@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Admin</title>
+<meta name="generator" content="WYSIWYG Web Builder 18 - http://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/delft.css" rel="stylesheet">
+<link href="css/admin.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery.ui.effect.min.js"></script>
+<script src="skrollr.min.js"></script>
+<script src="wb.overlay.min.js"></script>
+<script>   
+   $(document).ready(function()
+   {
+      $("a[href*='#planTripLayoutGrid']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#planTripLayoutGrid').offset().top }, 600, 'easeInSine');
+      });
+      $("a[href*='#contactForm']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contactForm').offset().top }, 600, 'easeInSine');
+      });
+      function skrollrInit()
+      {
+         skrollr.init({forceHeight: false, mobileCheck: function() { return false; }, smoothScrolling: false});
+      }
+      skrollrInit();
+      $('#OverlayMenu1-overlay').overlay({popup:true, hideTransition:true});
+      $('#OverlayMenu1').on('click', function(e)
+      {
+         $.overlay.toggle($('#OverlayMenu1-overlay'));
+         return false;
+      });
+   });
+</script>
+</head>
+<body>
+   <div id="wb_planTrip">
+      <div id="planTrip">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_OverlayMenu1">
+                  <a href="#" id="OverlayMenu1">
+                     <span class="line"></span>
+                     <span class="line">
+                     </span><span class="line"></span>
+                  </a>
+               </div>
+            </div>
+            <div class="col-2">
+               <div id="wb_planTripHeading">
+                  <h1 id="planTripHeading">CHAKULIA THE GROWING CITY</h1>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_LayoutGrid1">
+      <div id="LayoutGrid1">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Heading1">
+                  <h2 id="Heading1">SUJAN ADHIKARY</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_planTripLayoutGrid">
+      <div id="planTripLayoutGrid">
+         <div id="wb_Text4">
+            <p><span style="font-weight:bold;">Contact Me</span></p>
+            <p style="font-size:13px;line-height:16px;">&nbsp;</p>
+            <p style="font-size:13px;line-height:16px;"><a href="http://sujan-adhikary.web.app"><span style="font-weight:bold;">Sujan Adhikary</span></a></p>
+            <p style="font-size:13px;line-height:16px;">93,Namopara.</p>
+            <p style="font-size:13px;line-height:16px;">Chakulia.</p>
+            <p style="font-size:13px;line-height:16px;">East Singhbhum</p>
+            <p style="font-size:13px;line-height:16px;">Jharkhand-832301</p>
+            <p style="font-size:13px;line-height:16px;">Email- sujanadhikary.ece@gmail.com</p>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contactForm">
+      <div id="contactForm-divider-top">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 20" preserveAspectRatio="none">
+            <path class="divider-fill" d="M500,20 L490,0 h20 L500,20 Z"/>
+         </svg></div>
+      <div id="contactForm">
+         <div class="row">
+            <div class="col-1">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="StickyLayer" data-250-start="opacity:1;" data-start="opacity:0;">
+      <div id="wb_up-arrow">
+         <a href="#welcome"><div id="up-arrow"><i class="fa fa-angle-up"></i></div></a></div>
+   </div>
+   <div id="wb_footer">
+      <div id="footer">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Text3">
+                  <p style="font-size:12px;line-height:13.5px;">Copyright © 2023 Sujan Adhikary</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="OverlayMenu1-overlay">
+      <div class="OverlayMenu1">
+         <ul class="drilldown-menu" role="menu">
+            <li><a role="menuitem" href="./index.html" class="OverlayMenu1-effect"><i class="fa fa-home overlay-icon"></i>Home</a></li>
+            <li><a role="menuitem" href="./admin.html" class="OverlayMenu1-effect"><i class="fa fa-user overlay-icon"></i>Admin</a></li>
+         </ul>
+      </div>
+   </div>
+</body>
+</html>
